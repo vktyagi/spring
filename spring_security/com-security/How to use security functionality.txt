@@ -1,0 +1,15 @@
+This is a short manual for using/working with security.
+1. Create a java keystore, type must jceks.
+1.1 You can use java keytool which comes with JDK or any available keytool GUI applications.
+1.2 Remember the keystore password!
+
+2. Select value for KEY_ALIAS_NAME, for example
+	KEY_ALIAS_NAME = "secret_key";
+
+3. You can use KeyStoreUtilsApp.java to generate encrypted messages for your plain text messages.
+3.1 Just remember, to decrypt encoded messages you must use the same keystore/keystore password/alias key or you  will get an exception or decrypted value would be wrong!
+
+4. Created a new application demo: KeyStoreUtilsAppForKeyEncryption (java file) which take a properties file (app-template.properties) and encrypt values in the properties file
+ for given alias (specified in properties file) and write to new property file (app-template-enc.properties).
+
+
