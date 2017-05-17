@@ -1,0 +1,18 @@
+----Genreate Token
+
+curl -X POST \
+  http://localhost:8080/oauth-app/oauth/token \
+  -H 'authorization: Basic cmVzdEFwcDpyZXN0QXBw' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -H 'postman-token: 424c8939-cb02-53e6-8a06-f53e8273704b' \
+  -d 'username=admin&password=Welcome123&grant_type=password'
+  
+  
+  ----Genreate JWT Token
+  curl -X POST \
+  http://localhost:8080/oauth-app/authmgmt/v1/jwt \
+  -H 'authorization: Bearer a90c5ada-c63c-4448-b502-0f23d9ee0313' \
+  -H 'content-type: application/json' \
+  -d '{
+    "path": "arn:aws:execute-api:daddd/env/testApp/v1.0/api/campaignsname/test33211"
+}'
