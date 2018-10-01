@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SubscriberInitCriteria {
+public class FileInitCriteria {
 
     private String snapshotDate;
     private String accountNumber;

@@ -6,14 +6,14 @@ import java.util.Map;
 import org.apache.camel.Exchange;
 import org.apache.camel.processor.aggregate.AggregationStrategy;
 
-import com.example.route.SubscriberFileRoute;
+import com.example.route.FileProcesserRoute;
 
-public class SubscriberFileArrayListAggregator implements AggregationStrategy {
+public class FileArrayListAggregator implements AggregationStrategy {
 
 	@SuppressWarnings("unchecked")
 	public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
 		Map<String, String> newBody = (Map<String, String>) newExchange.getIn().getBody();
-		newBody.put("batchId", String.valueOf(SubscriberFileRoute.currentLoadUUID));
+		newBody.put("batchId", String.valueOf(FileProcesserRoute.currentLoadUUID));
 		ArrayList<Map<String, String>> list = null;
 		if (oldExchange == null) {
 			list = new ArrayList<Map<String, String>>();

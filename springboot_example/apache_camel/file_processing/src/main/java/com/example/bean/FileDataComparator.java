@@ -8,10 +8,10 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class SubscriberDataComparator implements Comparator<Map<String, String>> {
+public class FileDataComparator implements Comparator<Map<String, String>> {
 
 	SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-	private static final Logger LOG = LoggerFactory.getLogger(SubscriberDataComparator.class);
+	private static final Logger LOG = LoggerFactory.getLogger(FileDataComparator.class);
 
 	@Override
 	public int compare(Map<String, String> map1, Map<String, String> map2) {

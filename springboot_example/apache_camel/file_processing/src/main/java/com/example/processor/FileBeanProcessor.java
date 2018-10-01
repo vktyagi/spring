@@ -6,9 +6,9 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.example.bean.SubscriberInitCriteria;
+import com.example.bean.FileInitCriteria;
 
-public class SubscriberBeanProcessor implements Processor{
+public class FileBeanProcessor implements Processor{
 
 	/*@Autowired
 	private SqlSessionTemplate dcsnTemplateBatch;*/
@@ -19,7 +19,7 @@ public class SubscriberBeanProcessor implements Processor{
 		String subscriberIncrementalFileToken = exchange.getProperty("subscriberIncrementalFileToken").toString();
 		for (Map<String, String> dataMap : subscriberList) {
 			int version = 0;
-			SubscriberInitCriteria subscriberInitCriteria = null;
+			FileInitCriteria subscriberInitCriteria = null;
 			switch (dataMap.get("ACTION")) {
 			case "INSERT":
 			        if(!fileName.contains(subscriberIncrementalFileToken)){
