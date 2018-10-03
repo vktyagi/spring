@@ -54,7 +54,7 @@ public class FileProcesserRoute extends RouteBuilder {
 	         .choice()
                      .when(simple("${exchangeProperty.processcomplete} == 'done'"))
                       .log("List_Detail file batching process complete.")
-                    //  .bean("emailNotificationProcessor","processListDetailFileProcessNotification")
+                     //  .bean("emailNotificationProcessor","processNotification")
 		       .log("EmailNotification : emailListDetailsFileProcess completed!")
                    .endChoice()
                    .end()

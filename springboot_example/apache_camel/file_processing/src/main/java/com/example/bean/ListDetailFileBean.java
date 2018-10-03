@@ -27,7 +27,7 @@ public class ListDetailFileBean {
 
 
    /* @Autowired
-    private SqlSessionTemplate dcsnTemplateBatch;*/
+    private SqlSessionTemplate templateBatch;*/
     List<String> headersList = Arrays.asList("ACTION", "LIST_NAME", "LIST_TYPE", "VALUE", "RETURN_CODE", "VALIDATION_FLAG", "PRECEDENCE", "USERID");
     
     private String ERROR_FILE_DIRECTORY = "/opt/app/example/files/error";
@@ -64,11 +64,11 @@ public class ListDetailFileBean {
 		    } else if ("GREEN".equalsIgnoreCase(validationFlag)) {
 			dataMap.put("VALIDATION_FLAG", "2");
 		    }
-		  // dcsnTemplateBatch.insert("decisionManager.insertFileProcessing", dataMap);
+		  // templateBatch.insert("manager.insertFileProcessing", dataMap);
 		    break;
 
 		case "DELETE":
-		    //dcsnTemplateBatch.delete("decisionManager.deleteFileProcessing", dataMap);
+		    //templateBatch.delete("manager.deleteFileProcessing", dataMap);
 		    break;
 
 		default:
